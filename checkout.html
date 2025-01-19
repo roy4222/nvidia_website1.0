@@ -108,6 +108,15 @@
                                         <input type="text" class="form-control" id="zipCode" placeholder="輸入郵遞區號" required>
                                     </div>
                                 </div>
+                                <div class="mb-3">
+                                    <label for="shipping" class="form-label">配送方式</label>
+                                    <select class="form-select" id="shipping" required>
+                                        <option>選擇配送方式</option>
+                                        <option value="standard">標準配送 (NT$100)</option>
+                                        <option value="express">快速配送 (NT$200)</option>
+                                        <option value="pickup">門市自取 (免運費)</option>
+                                    </select>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -125,15 +134,6 @@
                             <div class="d-flex justify-content-between mb-2">
                                 <span>商品總計</span>
                                 <span class="cart-subtotal">NT$ 0</span>
-                            </div>
-                            <!-- 運送方式 -->
-                            <div class="mb-3">
-                                <label for="shippingMethod" class="form-label">運送方式</label>
-                                <select class="form-select" id="shippingMethod">
-                                    <option value="standard" data-fee="100">標準運送 (NT$ 100)</option>
-                                    <option value="express" data-fee="200">快速運送 (NT$ 200)</option>
-                                    <option value="pickup" data-fee="0">門市自取 (免運費)</option>
-                                </select>
                             </div>
                             <div class="d-flex justify-content-between mb-2">
                                 <span>運費</span>
