@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFAkwq5rkkbUsQuJvSThsHS05SkYYejcUijA&s">
-    <link rel="stylesheet" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/style.css">
+    <link rel="stylesheet" href="../style.css">
  
 </head>
 <body>
@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <!-- 品牌名稱 -->
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="../index.html">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFAkwq5rkkbUsQuJvSThsHS05SkYYejcUijA&s" alt="輝達" height="60">
             </a>
             <!-- 響應式折疊按鈕 -->
@@ -30,32 +30,32 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <!-- 首頁連結 -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/index.html"><strong>首頁</strong></a>
+                        <a class="nav-link active" aria-current="page" href="../index.html"><strong>首頁</strong></a>
                     </li>
                     <!-- 產品連結 -->
                     <li class="nav-item">
-                        <a class="nav-link" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/product.html"><strong>產品</strong></a>
+                        <a class="nav-link" href="../product.html"><strong>產品</strong></a>
                     </li>
                     <!-- 關於我們連結 -->
                     <li class="nav-item">
-                        <a class="nav-link" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/about.html"><strong>關於我們</strong></a>
+                        <a class="nav-link" href="../about.html"><strong>關於我們</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/recruitment.html"><strong>人力資源</strong></a>
+                        <a class="nav-link" href="../recruitment.html"><strong>人力資源</strong></a>
                     </li>
                     <!-- 聯絡我們連結 -->
                     <li class="nav-item">
-                        <a class="nav-link" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/contact.html"><strong>聯絡我們</strong></a>
+                        <a class="nav-link" href="../contact.html"><strong>聯絡我們</strong></a>
                     </li>
                 </ul>
                  <!-- 登入和購物車按鈕 -->
                  <div class="d-flex">
                     <!-- 登入按鈕 -->
-                    <a href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/login.html" class="btn btn-outline-primary me-2" role="button">
+                    <a href="../login.html" class="btn btn-outline-primary me-2" role="button">
                         <i class="bi bi-person-fill"></i> <strong>登入</strong>
                     </a>
                     <!-- 購物車按鈕 -->
-                    <a href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/cart.html" class="btn btn-outline-success me-2 position-relative" role="button">
+                    <a href="../cart.html" class="btn btn-outline-success me-2 position-relative" role="button">
                         <i class="bi bi-cart-fill"></i> <strong>購物車</strong>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">
                             0
@@ -69,63 +69,49 @@
     <section class="container mt-5">
         <div class="row">
             <div class="col-md-6">
-                <img src="https://www.nvidia.com/content/nvidiaGDC/eu/en_EU/project-digits/home/_jcr_content/root/responsivegrid/nv_container_1505625997/nv_image.coreimg.100.850.jpeg/1736209420108/nvidia-project-digits-exploded-vew-ari.jpeg" alt="NVIDIA Project Digits" class="img-fluid rounded">
+                <img src="https://s4.itho.me/sites/default/files/images/Nvidia%20AI-on-5G-2021-07-01_141829.jpg" alt="NVIDIA A100 AI 加速卡" class="img-fluid rounded">
             </div>
             <div class="col-md-6">
-                <h2 class="mb-3">NVIDIA Project Digits</h2>
-                <p class="lead">最新一代的AI開發套件，為人工智能和機器學習帶來革命性能</p>
+                <h2 class="mb-3">NVIDIA A100 AI 加速卡</h2>
+                <p class="lead">最先進的 AI 和高效能運算加速器，為數據中心提供革命性能</p>
                 <ul class="list-unstyled">
-                    <li><strong>CPU：</strong> 12核心 Arm Cortex-A78AE v8.2</li>
-                    <li><strong>GPU：</strong> NVIDIA Ampere 架構 GPU</li>
-                    <li><strong>AI 性能：</strong> 275 TOPS</li>
-                    <li><strong>記憶體：</strong> 128GB LPDDR5</li>
-                    <li><strong>儲存：</strong> 64GB eMMC 5.1</li>
+                    <li><strong>CUDA 核心：</strong> 6912</li>
+                    <li><strong>基礎時脈：</strong> 1.41 GHz</li>
+                    <li><strong>Boost 時脈：</strong> 1.78 GHz</li>
+                    <li><strong>記憶體：</strong> 80GB HBM2e</li>
+                    <li><strong>記憶體頻寬：</strong> 2039 GB/s</li>
                 </ul>
-                <h3 class="mt-4">NT$ 90,000</h3>
-                <button class="btn btn-nvidia btn-lg mt-3 hover-effect add-to-cart-btn"
-                    data-product-id="5"
-                    data-product-name="NVIDIA Project Digits"
-                    data-product-price="199990"
-                    data-product-image="https://www.nvidia.com/content/nvidiaGDC/eu/en_EU/project-digits/home/_jcr_content/root/responsivegrid/nv_container_1505625997/nv_image.coreimg.100.850.jpeg/1736209420108/nvidia-project-digits-exploded-vew-ari.jpeg">
-                <i class="bi bi-cart-plus-fill me-2"></i>加入購物車
-                </button>
-                <button class="btn btn-secondary btn-lg mt-3 hover-effect" 
-                    onclick="cart.addItem({
-                        id: '5',
-                        name: 'NVIDIA Project Digits',
-                        price: 90000,
-                        image: 'https://www.nvidia.com/content/nvidiaGDC/eu/en_EU/project-digits/home/_jcr_content/root/responsivegrid/nv_container_1505625997/nv_image.coreimg.100.850.jpeg/1736209420108/nvidia-project-digits-exploded-vew-ari.jpeg',
-                        quantity: 1
-                    }); window.location.href='../cart.html';">
-                    <i class="bi bi-credit-card-fill me-2"></i>直接結帳
+                <h3 class="mt-4">價格請洽詢</h3>
+                <button class="btn btn-nvidia btn-lg hover-effect">
+                    <i class="bi bi-envelope-fill me-2"></i>聯繫銷售
                 </button>
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-12 mb-5">
                 <h3>產品特色與規格</h3>
-                <p class="lead mb-4">Project Digits 是NVIDIA最新一代的AI開發套件，專為人工智能和機器學習應用而設計，提供卓越的運算能力和創新功能。</p>
+                <p class="lead mb-4">NVIDIA A100 是專為 AI 和高效能運算設計的頂級加速器，採用最新的 NVIDIA Ampere 架構，為數據中心和大規模 AI 訓練提供前所未有的性能。</p>
                 <div class="row">
                     <div class="col-md-6">
                         <h4>主要特色</h4>
                         <ul>
-                            <li>高性能 AI 運算，適用於複雜的機器學習任務</li>
-                            <li>支援多種深度學習框架，如TensorFlow、PyTorch等</li>
-                            <li>內建 NVIDIA DeepStream SDK，優化視頻分析應用</li>
-                            <li>豐富的 I/O 接口，支援多種感測器和設備連接</li>
-                            <li>低功耗設計，適合邊緣計算和嵌入式系統</li>
-                            <li>完整的軟體堆疊和開發工具，加速應用開發</li>
+                            <li>第三代 Tensor Core，提供卓越的 AI 性能</li>
+                            <li>支援 TF32 和 FP64，適用於 AI 和 HPC 工作負載</li>
+                            <li>Multi-Instance GPU (MIG) 技術，實現資源最佳化</li>
+                            <li>NVLink 和 NVSwitch 技術，提供高速互連</li>
+                            <li>PCIe Gen 4，確保高速數據傳輸</li>
+                            <li>支援 CUDA 11，簡化 AI 和 HPC 應用開發</li>
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <h4>技術規格</h4>
                         <ul>
-                            <li>CPU：12核心 Arm Cortex-A78AE v8.2</li>
-                            <li>GPU：NVIDIA Ampere 架構 GPU</li>
-                            <li>AI 性能：275 TOPS</li>
-                            <li>記憶體：32GB LPDDR5</li>
-                            <li>儲存：64GB eMMC 5.1</li>
-                            <li>功耗：15W-60W</li>
+                            <li>CUDA 核心數：6912</li>
+                            <li>基礎時脈：1.41 GHz</li>
+                            <li>Boost 時脈：1.78 GHz</li>
+                            <li>記憶體：80GB HBM2e</li>
+                            <li>記憶體頻寬：2039 GB/s</li>
+                            <li>TDP：400W</li>
                         </ul>
                     </div>
                 </div>
@@ -194,6 +180,6 @@
    
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/week1.5_bootstrap/企業購物網站實作-以輝達為例/js/cart.js"></script>
+    <script src="../js/cart.js"></script>
 </body>
 </html>
