@@ -1,0 +1,708 @@
+/* 標題下方裝飾線樣式 */
+.title-underline {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #76b900;
+}
+
+/* 產品卡片樣式 */
+.product-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 產品卡片懸停效果 */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* 產品圖片容器樣式 */
+.card-img-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+/* 產品圖片樣式 */
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* 產品圖片懸停效果 */
+.product-card:hover .card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+/* 產品標籤背景漸變效果 */
+.card-img-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+/* 標籤樣式 */
+.badge {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+}
+
+/* 產品規格標籤樣式 */
+.product-specs .badge {
+    font-weight: normal;
+}
+
+/* 懸停效果通用樣式 */
+.hover-effect {
+    transition: all 0.3s ease;
+}
+
+/* 按鈕懸停效果 */
+.hover-effect:hover {
+    transform: translateY(-2px);
+}
+
+/* 主要按鈕樣式 */
+.btn-primary {
+    background: #76b900;
+    border: none;
+}
+
+/* 主要按鈕懸停效果 */
+.btn-primary:hover {
+    background: #669900;
+}
+/* 次要按鈕樣式 */
+.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+/* 次要按鈕懸停效果 */
+.btn-outline-primary:hover {
+    background: #76b900;
+    border-color: transparent;
+}
+
+/* 產品卡片基本樣式 */
+.category-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 400px;
+}
+
+/* 卡片懸停效果 */
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* 圖片容器樣式 */
+.category-img-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* 圖片樣式 */
+.category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* 圖片懸停效果 */
+.category-card:hover .category-img {
+    transform: scale(1.1);
+}
+
+/* 覆蓋層樣式 */
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, 
+        rgba(0,0,0,0.1) 0%,
+        rgba(0,0,0,0.7) 50%,
+        rgba(0,0,0,0.9) 100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+}
+
+/* 覆蓋層懸停效果 */
+.category-card:hover .category-overlay {
+    opacity: 1;
+}
+
+/* 內容區域樣式 */
+.category-content {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    width: 100%;
+}
+
+/* 內容區域懸停效果 */
+.category-card:hover .category-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* 產品標題樣式 */
+.category-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* 規格區域樣式 */
+.category-specs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+/* 規格標籤樣式 */
+.spec-badge {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+    display: inline-flex;
+    align-items: center;
+}
+
+/* 產品描述文字樣式 */
+.category-text {
+    color: rgba(255,255,255,0.9);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+/* 「探索更多」按鈕樣式 */
+.category-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(45deg, #76b900, #1a9f00);
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* 按鈕懸停效果 */
+.category-btn:hover {
+    background: linear-gradient(45deg, #8cd600, #1ebd00);
+    transform: translateX(5px);
+    color: white;
+}
+
+/* 按鈕圖標樣式 */
+.category-btn i {
+    transition: transform 0.3s ease;
+}
+
+/* 按鈕圖標懸停效果 */
+.category-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* 頁尾樣式 */
+footer {
+    background: linear-gradient(to right, #1a1a1a, #2c2c2c) !important;
+    border-top: 3px solid #76b900;
+}
+
+footer h5 {
+    color: #76b900;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+footer h5::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to right, #76b900, #8cd600);
+}
+
+footer .list-unstyled li {
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+footer .list-unstyled li a {
+    position: relative;
+    padding-left: 15px;
+}
+
+footer .list-unstyled li a::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: #76b900;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+footer .list-unstyled li a:hover {
+    color: #76b900 !important;
+    transform: translateX(5px);
+}
+
+footer .list-unstyled li a:hover::before {
+    transform: translateX(5px);
+}
+
+footer p {
+    line-height: 1.8;
+}
+
+footer .bi {
+    color: #76b900;
+}
+
+footer hr {
+    border-color: rgba(255,255,255,0.1);
+    margin: 30px 0;
+}
+
+footer .text-light {
+    opacity: 0.9;
+}
+
+/* 社交媒體圖標樣式 */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #76b900;
+    transform: translateY(-3px);
+}
+
+/* 關於頁面的樣式 */
+.about-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* 公司標誌容器 */
+.logo-container {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: translateY(-5px);
+}
+
+/* 使命區塊樣式 */
+.mission-section {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mission-section h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* 創新領域列表樣式 */
+.innovation-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.innovation-list i {
+    color: #76b900;
+}
+
+/* 卡片樣式 */
+.info-card {
+    background: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card .card-title {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #76b900;
+}
+
+.info-card .card-text {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 招募頁面樣式 */
+.recruitment-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.table-nvidia {
+    background-color: #76b900;
+    color: white;
+}
+
+.table-nvidia th {
+    font-weight: 600;
+    border: none;
+}
+
+.text-nvidia {
+    color: #76b900;
+}
+
+.btn-nvidia {
+    background-color: #76b900;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-nvidia:hover {
+    background-color: #5a8f00;
+    color: white;
+}
+
+.btn-nvidia-outline {
+    color: #76b900;
+    border: 1px solid #76b900;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-nvidia-outline:hover {
+    background-color: #76b900;
+    color: white;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(118, 185, 0, 0.05);
+}
+
+.search-box .form-control {
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #ced4da;
+}
+
+.search-box .form-control:focus {
+    border-color: #76b900;
+    box-shadow: 0 0 0 0.2rem rgba(118, 185, 0, 0.25);
+}
+
+.badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+}
+
+/* 職位列表樣式 */
+.list-unstyled li {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+.list-unstyled li:last-child {
+    margin-bottom: 0;
+}
+
+.list-unstyled li i {
+    color: #76b900;
+    font-size: 1rem;
+}
+
+.list-unstyled li:hover {
+    color: #333;
+}
+
+/* 調整表格內容的寬度 */
+.table td:nth-child(5) {
+    min-width: 300px;
+}
+
+/* 調整表格按鈕列的樣式 */
+.table td:last-child {
+    width: 120px;
+    vertical-align: middle;
+}
+
+.table .btn-nvidia-outline {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* 確保按鈕內容置中 */
+.btn-nvidia-outline i {
+    vertical-align: middle;
+}
+
+/* 聯絡頁面樣式 */
+.contact-card {
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-info .contact-item {
+    transition: all 0.3s ease;
+}
+
+.contact-info .contact-item:hover {
+    transform: translateX(10px);
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(13, 110, 253, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.contact-icon i {
+    font-size: 1.2rem;
+}
+
+.input-group-text {
+    background-color: rgba(13, 110, 253, 0.1);
+    border: 1px solid #ced4da;
+}
+
+.input-group-text i {
+    color: #0d6efd;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+#contactForm button {
+    transition: all 0.3s ease;
+}
+
+#contactForm button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+/* 登入頁面樣式 */
+.login-section {
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+}
+
+.login-card {
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+}
+
+.nav-tabs .nav-link {
+    color: #6c757d;
+    border: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #76b900;
+    background-color: transparent;
+}
+
+.nav-tabs .nav-link.active {
+    color: #76b900;
+    border: none;
+    border-bottom: 2px solid #76b900;
+    background-color: transparent;
+}
+
+.input-group-text {
+    border: 1px solid #ced4da;
+    background-color: #f8f9fa;
+}
+
+.input-group-text i {
+    font-size: 1.1rem;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    padding: 0.6rem 1rem;
+}
+
+.form-control:focus {
+    border-color: #76b900;
+    box-shadow: 0 0 0 0.2rem rgba(118, 185, 0, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: #76b900;
+    border-color: #76b900;
+}
+
+.btn-nvidia {
+    background-color: #76b900;
+    border-color: #76b900;
+    color: white;
+    padding: 0.6rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-nvidia:hover {
+    background-color: #669f00;
+    border-color: #669f00;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(118, 185, 0, 0.2);
+}
+
+.text-nvidia {
+    color: #76b900;
+}
+
+/* 商品頁面樣式 */
+.carousel {
+    border-radius: 8px;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.cart-sidebar {
+    position: sticky;
+    top: 20px;
+}
+
+.cart-item {
+    transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.cart-item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item-quantity input {
+    width: 60px;
+}
+
+.cart-item-details {
+    margin-right: 10px;
+}
+
+.form-select {
+    border-color: #ced4da;
+    cursor: pointer;
+}
+
+.form-select:focus {
+    border-color: #76b900;
+    box-shadow: 0 0 0 0.2rem rgba(118, 185, 0, 0.25);
+}
+
+.bg-nvidia {
+    background-color: #76b900;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    .cart-sidebar {
+        position: static;
+        margin-top: 20px;
+    }
+}

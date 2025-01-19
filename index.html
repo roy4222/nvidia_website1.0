@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <title>輝達</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFAkwq5rkkbUsQuJvSThsHS05SkYYejcUijA&s">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .about-text {
+            transition: transform 0.3s ease;
+        }
+        
+        .about-text:hover {
+            transform: translateY(-5px);
+        }
+        
+        .badge.bg-success {
+            background-color: #76b900 !important;
+            transition: all 0.3s ease;
+        }
+        
+        .badge.bg-success:hover {
+            transform: scale(1.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .text-success {
+            color: #76b900 !important;
+        }
+        
+        .about-icon {
+            font-size: 1.5rem;
+            color: #76b900;
+            margin-right: 0.5rem;
+        }
+        
+        .title-underline {
+            height: 3px;
+            width: 60px;
+            background-color: #76b900;
+            margin: 0.5rem auto 0;
+        }
+        
+        .map-container {
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .map-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .about-section h5 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .about-section p {
+            line-height: 1.8;
+            color: #6c757d;
+        }
+        
+        .about-section .fw-bold {
+            color: #495057;
+        }
+        
+        .about-card {
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- 導航欄 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- 品牌名稱 -->
+            <a class="navbar-brand" href="index.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFAkwq5rkkbUsQuJvSThsHS05SkYYejcUijA&s" alt="輝達" height="60">
+            </a>
+            <!-- 響應式折疊按鈕 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- 導航項目容器 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- 導航項目列表 -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- 首頁連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><strong>首頁</strong></a>
+                    </li>
+                    <!-- 產品連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html"><strong>產品</strong></a>
+                    </li>
+                    <!-- 關於我們連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><strong>關於我們</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recruitment.html"><strong>人力資源</strong></a>
+                    </li>
+                    <!-- 聯絡我們連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><strong>聯絡我們</strong></a>
+                    </li>
+                </ul>
+                <!-- 登入和購物車按鈕 -->
+                <div class="d-flex">
+                    <!-- 登入按鈕 -->
+                    <a href="login.html" class="btn btn-outline-primary me-2" role="button">
+                        <i class="bi bi-person-fill"></i> <strong>登入</strong>
+                    </a>
+                    <!-- 購物車按鈕 -->
+                    <a href="cart.html" class="btn btn-outline-success me-2 position-relative" role="button">
+                        <i class="bi bi-cart-fill"></i> <strong>購物車</strong>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 廣告輪播區塊 -->
+    <div id="adCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <!-- 輪播指示器：用於顯示當前幻燈片位置和導航 -->
+        <div class="carousel-indicators">
+            <!-- 每個按鈕對應一個幻燈片，data-bs-slide-to 指定目標幻燈片索引 -->
+            <button type="button" data-bs-target="#adCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#adCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#adCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        
+        <!-- 輪播內容容器 -->
+        <div class="carousel-inner">
+            <!-- 第一個輪播項目（預設顯示） -->
+            <div class="carousel-item active">
+                <!-- 輪播圖片：使用 object-fit: cover 和 object-position: bottom 確保圖片填滿容器並向下對齊 -->
+                <img src="https://cdn-www.cw.com.tw/article/202306/article-647a45e4e526d.JPG" class="d-block w-100" style="max-height: 500px; object-fit: cover; object-position: bottom; filter: brightness(0.8);" alt="NVIDIA Ad 1">
+                <!-- 圖片說明文字：只在中等尺寸以上的設備顯示 -->
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold text-white">AI 運算的未來</h2>
+                    <p class="lead">探索 NVIDIA 最新的 AI 運算技術</p>
+                </div>
+            </div>
+            <!-- 第二個輪播項目 -->
+            <div class="carousel-item">
+                <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/geforce-rtx-50series-og-1200x630.jpg" class="d-block w-100" style="max-height: 500px; object-fit: cover; filter: brightness(0.8);" alt="NVIDIA Ad 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold text-white">遊戲體驗的極致</h2>
+                    <p class="lead">最新 RTX 系列顯示卡，帶來前所未有的遊戲體驗</p>
+                </div>
+            </div>
+            <!-- 第三個輪播項目 -->
+            <div class="carousel-item">
+                <img src="https://cdn-www.cw.com.tw/article/202204/article-62663fa594bd0.jpg" class="d-block w-100" style="max-height: 500px; object-fit: cover; filter: brightness(0.8);" alt="NVIDIA Ad 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold text-white">數據中心解決方案</h2>
+                    <p class="lead">為企業提供最強大的運算能力</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 上一張幻燈片控制按鈕 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#adCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <!-- 下一張幻燈片控制按鈕 -->
+        <button class="carousel-control-next" type="button" data-bs-target="#adCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- 產品分類區塊 -->
+    <section class="container mt-5">
+        <!-- 標題區域，使用 Bootstrap 的文字置中、邊距和字體粗細類別 -->
+        <h2 class="text-center mb-4 fw-bold position-relative">
+            <span class="position-relative">
+                產品分類
+                <!-- 自定義的標題下劃線 -->
+                <div class="title-underline"></div>
+            </span>
+        </h2>
+        <!-- Bootstrap 的行容器 -->
+        <div class="row">
+            <!-- 每個產品卡片佔用 4 列寬度（在中等屏幕及以上），底部有間距 -->
+            <div class="col-md-4 mb-4">
+                <!-- 自定義的產品卡片容器 -->
+                <div class="category-card">
+                    <!-- 圖片容器 -->
+                    <div class="category-img-container">
+                        <!-- 產品圖片 -->
+                        <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/rtx-4090/geforce-ada-4090-web-og-1200x630.jpg" alt="顯示卡" class="category-img">
+                        <!-- 懸停時顯示的覆蓋層 -->
+                        <div class="category-overlay">
+                            <!-- 產品內容 -->
+                            <div class="category-content">
+                                <!-- 產品標題 -->
+                                <h3 class="category-title">GeForce RTX™ 50 系列顯示卡</h3>
+                                <!-- 產品規格，使用 Bootstrap 圖標 -->
+                                <div class="category-specs">
+                                    <span class="spec-badge"><i class="bi bi-gpu-card me-2"></i>Blackwell 架構</span>
+                                    <span class="spec-badge"><i class="bi bi-lightning-charge me-2"></i>DLSS 4</span>
+                                </div>
+                                <!-- 產品描述 -->
+                                <p class="category-text">搭載 NVIDIA Blackwell 架構，為遊戲玩家和創作者帶來革命性的 AI 算力與遊戲體驗。</p>
+                                <!-- 「探索更多」按鈕 -->
+                                <a href="product.html" class="category-btn">
+                                    <span>探索更多</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 重複類似的結構用於其他兩個產品卡片 -->
+            <div class="col-md-4 mb-4">
+                <div class="category-card">
+                    <div class="category-img-container">
+                        <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/ces-2023/40-series-laptops/geforce-rtx-40-series-laptops-og-1200x630.jpg" alt="筆電" class="category-img">
+                        <div class="category-overlay">
+                            <div class="category-content">
+                                <h3 class="category-title">GeForce RTX 50 系列筆電</h3>
+                                <div class="category-specs">
+                                    <span class="spec-badge"><i class="bi bi-laptop me-2"></i>Max-Q 技術</span>
+                                    <span class="spec-badge"><i class="bi bi-battery-charging me-2"></i>超長續航</span>
+                                </div>
+                                <p class="category-text">最新一代 RTX 筆電，整合強大效能於輕薄機身中，搭配 Max-Q 技術實現極致效能。</p>
+                                <a href="product.html" class="category-btn">
+                                    <span>探索更多</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="category-card">
+                    <div class="category-img-container">
+                        <img src="https://cdn.wccftech.com/wp-content/uploads/2025/01/NVIDIA-CEO-Jensen-Huang-Keynote-at-CES-2025-1-25-28-screenshot.png" alt="Project Digits" class="category-img">
+                        <div class="category-overlay">
+                            <div class="category-content">
+                                <h3 class="category-title">個人超級電腦 Project Digits</h3>
+                                <div class="category-specs">
+                                    <span class="spec-badge"><i class="bi bi-cpu me-2"></i>1 Petaflop AI</span>
+                                    <span class="spec-badge"><i class="bi bi-hdd-rack me-2"></i>4TB NVMe</span>
+                                </div>
+                                <p class="category-text">桌上型 AI 超級電腦，支援大型 AI 模型訓練與推論，開創個人 AI 運算新紀元。</p>
+                                <a href="product.html" class="category-btn">
+                                    <span>探索更多</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 產品列表區域 -->
+    <section class="container mt-5">
+        <!-- 標題區塊 -->
+        <h2 class="text-center mb-4 fw-bold position-relative">
+            <span class="position-relative">
+                產品列表
+                <!-- 裝飾性底線 -->
+                <div class="title-underline"></div>
+            </span>
+        </h2>
+        <!-- 產品卡片網格 -->
+        <div class="row">
+            <!-- RTX 5090 產品卡片 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 product-card">
+                    <!-- 產品圖片區 -->
+                    <div class="card-img-wrapper">
+                        <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/geforce-rtx-50series-og-1200x630.jpg" class="card-img-top" alt="RTX 5090">
+                        <!-- 產品狀態標籤 -->
+                        <div class="card-img-overlay d-flex align-items-end">
+                            <span class="badge bg-success mb-2">新品上市</span>
+                        </div>
+                    </div>
+                    <!-- 產品詳細資訊 -->
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">NVIDIA RTX 5090</h5>
+                        <!-- 技術規格標籤 -->
+                        <div class="product-specs mb-3">
+                            <span class="badge bg-light text-dark me-2">32GB GDDR7</span>
+                            <span class="badge bg-light text-dark">Blackwell 架構</span>
+                        </div>
+                        
+                        <!-- 產品簡介 -->
+                        <p class="card-text flex-grow-1">史上最強大的 GeForce GPU，採用 NVIDIA Blackwell 架構。配備 32GB GDDR7 記憶體，提供卓越的 AI 算力和遊戲性能。支援全光線追蹤和低延遲技術，適合高端遊戲和創意工作。</p>
+                        <!-- 價格標示 -->
+                        <h6 class="fw-bold text-primary mb-3">NT$ 71,990 元起</h6>
+                        <!-- 操作按鈕組 -->
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-nvidia hover-effect add-to-cart-btn"
+                                    data-product-id="1"
+                                    data-product-name="NVIDIA RTX 5090"
+                                    data-product-price="71990"
+                                    data-product-image="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/geforce-rtx-50series-og-1200x630.jpg">
+                                <i class="bi bi-cart-plus-fill me-2"></i>加入購物車
+                            </button>
+                            <a href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/product/5090.html" class="btn btn-outline-primary hover-effect">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- RTX 5080 產品卡片 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 product-card">
+                    <!-- 產品圖片區 -->
+                    <div class="card-img-wrapper">
+                        <img src="https://www.koc.com.tw/wp-content/uploads/2024/12/20241228135742_0_5c1298.jpeg" class="card-img-top" alt="RTX 5080">
+                        <!-- 產品狀態標籤 -->
+                        <div class="card-img-overlay d-flex align-items-end">
+                            <span class="badge bg-success mb-2">新品上市</span>
+                        </div>
+                    </div>
+                    <!-- 產品詳細資訊 -->
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">NVIDIA RTX 5080</h5>
+                        <!-- 技術規格標籤 -->
+                        <div class="product-specs mb-3">
+                            <span class="badge bg-light text-dark me-2">32GB GDDR7</span>
+                            <span class="badge bg-light text-dark">Blackwell 架構</span>
+                        </div>
+                        <!-- 產品簡介 -->
+                        <p class="card-text flex-grow-1">NVIDIA® GeForce RTX™ 5080 搭載 Blackwell 架構和 GDDR7 記憶體，支援 DLSS 4 技術。為遊戲和創作應用提供卓越性能，通過 NVIDIA Studio 加速創作過程。</p>
+                        <!-- 價格標示 -->
+                        <h6 class="fw-bold text-primary mb-3">NT$ 35,990 元起</h6>
+                        <!-- 操作按鈕組 -->
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-nvidia hover-effect add-to-cart-btn"
+                                    data-product-id="2"
+                                    data-product-name="NVIDIA RTX 5080"
+                                    data-product-price="35990"
+                                    data-product-image="https://www.koc.com.tw/wp-content/uploads/2024/12/20241228135742_0_5c1298.jpeg">
+                                <i class="bi bi-cart-plus-fill me-2"></i>加入購物車
+                            </button>
+                            <a href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/product/5080.html" class="btn btn-outline-primary hover-effect">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- RTX 5070 Ti 產品卡片 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 product-card">
+                    <!-- 產品圖片區 -->
+                    <div class="card-img-wrapper">
+                        <img src="https://jctechspace.com/wp-content/uploads/2024/11/NVIDIA-GeForce-RTX-5070-Ti-GPU.webp" class="card-img-top" alt="RTX 5070 Ti">
+                        <!-- 產品狀態標籤 -->
+                        <div class="card-img-overlay d-flex align-items-end">
+                            <span class="badge bg-primary mb-2">熱賣中</span>
+                        </div>
+                    </div>
+                    <!-- 產品詳細資訊 -->
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">NVIDIA RTX 5070 Ti</h5>
+                        <!-- 技術規格標籤 -->
+                        <div class="product-specs mb-3">
+                            <span class="badge bg-light text-dark me-2">16GB GDDR7</span>
+                            <span class="badge bg-light text-dark">DLSS 4</span>
+                        </div>
+                        <!-- 產品簡介 -->
+                        <p class="card-text flex-grow-1">搭載 NVIDIA Blackwell 架構，提供卓越效能。支援 DLSS 4 技術，實現高畫格率遊戲體驗。NVIDIA Studio 加速創意工作流程，AI 功能開啟全新可能性。</p>
+                        <!-- 價格標示 -->
+                        <h6 class="fw-bold text-primary mb-3"> NT$ 26,990 元起</h6>
+                        <!-- 操作按鈕組 -->
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-nvidia hover-effect add-to-cart-btn"
+                                    data-product-id="3"
+                                    data-product-name="NVIDIA RTX 5070 Ti"
+                                    data-product-price="26990"
+                                    data-product-image="https://jctechspace.com/wp-content/uploads/2024/11/NVIDIA-GeForce-RTX-5070-Ti-GPU.webp">
+                                <i class="bi bi-cart-plus-fill me-2"></i>加入購物車
+                            </button>
+                            <a href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/product/5070_Ti.html" class="btn btn-outline-primary hover-effect">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- RTX 5070 產品卡片 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 product-card">
+                    <!-- 產品圖片區 -->
+                    <div class="card-img-wrapper">
+                        <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/5070-family/geforce-rtx-5070-ti-og-image.jpg" alt="RTX 5070">
+                        <!-- 產品狀態標籤 -->
+                        <div class="card-img-overlay d-flex align-items-end">
+                            <span class="badge bg-success mb-2">熱門推薦</span>
+                        </div>
+                    </div>
+                    <!-- 產品詳細資訊 -->
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">NVIDIA RTX 5070</h5>
+                        <!-- 技術規格標籤 -->
+                        <div class="product-specs mb-3">
+                            <span class="badge bg-light text-dark me-2">16GB GDDR7</span>
+                            <span class="badge bg-light text-dark">DLSS 4</span>
+                        </div>
+                        <!-- 產品簡介 -->
+                        <p class="card-text flex-grow-1">NVIDIA RTX 5070 採用先進 Blackwell 架構，為玩家和創作者提供強大性能。支援 DLSS 4 技術，實現極致遊戲體驗和加速創意工作流程。</p>
+                        <!-- 價格標示 -->
+                        <h6 class="fw-bold text-primary mb-3">NT$ 19,990 元起</h6>
+                        <!-- 操作按鈕組 -->
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-nvidia hover-effect add-to-cart-btn"
+                                    data-product-id="4"
+                                    data-product-name="NVIDIA RTX 5070"
+                                    data-product-price="19990"
+                                    data-product-image="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/5070-family/geforce-rtx-5070-ti-og-image.jpg">
+                                <i class="bi bi-cart-plus-fill me-2"></i>加入購物車
+                            </button>
+                            <a href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/product/5070.html" class="btn btn-outline-primary hover-effect">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Digits 產品卡片 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 product-card">
+                    <!-- 產品圖片區 -->
+                    <div class="card-img-wrapper">
+                        <img src="https://www.nvidia.com/content/nvidiaGDC/eu/en_EU/project-digits/home/_jcr_content/root/responsivegrid/nv_container_1505625997/nv_image.coreimg.100.850.jpeg/1736209420108/nvidia-project-digits-exploded-vew-ari.jpeg" class="card-img-top" alt="Project Digits">
+                        <!-- 產品狀態標籤 -->
+                        <div class="card-img-overlay d-flex align-items-end">
+                            <span class="badge bg-warning mb-2">預購中</span>
+                        </div>
+                    </div>
+                    <!-- 產品詳細資訊 -->
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Project Digits</h5>
+                        <!-- 技術規格標籤 -->
+                        <div class="product-specs mb-3">
+                            <span class="badge bg-light text-dark me-2">128GB 記憶體</span>
+                            <span class="badge bg-light text-dark">4TB 存儲</span>
+                        </div>
+                        <!-- 產品簡介 -->
+                        <p class="card-text flex-grow-1">高性能桌面 AI 系統，可處理高達 2000 億參數模型。配備 128GB 統一記憶體和最高 4TB NVMe 存儲。兩系統可連接處理 4050 億參數模型。起售價 3,000 美元。</p>
+                        <!-- 價格標示 -->
+                        <h6 class="fw-bold text-primary mb-3"> 售價3,000美元</h6>
+                        <!-- 操作按鈕組 -->
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-nvidia hover-effect add-to-cart-btn"
+                                    data-product-id="5"
+                                    data-product-name="Project Digits"
+                                    data-product-price="90000"
+                                    data-product-image="https://www.nvidia.com/content/nvidiaGDC/eu/en_EU/project-digits/home/_jcr_content/root/responsivegrid/nv_container_1505625997/nv_image.coreimg.100.850.jpeg/1736209420108/nvidia-project-digits-exploded-vew-ari.jpeg">
+                                <i class="bi bi-cart-plus-fill me-2"></i>加入購物車
+                            </button>
+                            <a href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/product/project_digits.html" class="btn btn-outline-primary hover-effect">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- NVIDIA A100 AI 加速卡產品卡片 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 product-card">
+                    <!-- 產品圖片區 -->
+                    <div class="card-img-wrapper">
+                        <img src="https://s4.itho.me/sites/default/files/images/Nvidia%20AI-on-5G-2021-07-01_141829.jpg" class="card-img-top" alt="NVIDIA A100">
+                        <!-- 產品狀態標籤 -->
+                        <div class="card-img-overlay d-flex align-items-end">
+                            <span class="badge bg-success mb-2">企業方案</span>
+                        </div>
+                    </div>
+                    <!-- 產品詳細資訊 -->
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">NVIDIA A100 AI 加速卡</h5>
+                        <!-- 技術規格標籤 -->
+                        <div class="product-specs mb-3">
+                            <span class="badge bg-light text-dark me-2">80GB HBM2e</span>
+                            <span class="badge bg-light text-dark">TensorFloat-32</span>
+                        </div>
+                        <!-- 產品簡介 -->
+                        <p class="card-text flex-grow-1">NVIDIA A100 為企業級 AI 和高性能計算提供突破性性能。支援 TensorFloat-32 運算，加速 AI 訓練和推理。</p>
+                        <!-- 價格標示 -->
+                        <h6 class="fw-bold text-primary mb-3">價格請洽詢</h6>
+                        <!-- 操作按鈕組 -->
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-nvidia hover-effect">
+                                <i class="bi bi-envelope-fill me-2"></i>聯繫銷售
+                            </button>
+                            <button class="btn btn-outline-primary hover-effect">了解更多</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 關於輝達 -->
+    <section class="about-section py-5 bg-light">
+        <div class="container">
+            <!-- 標題 -->
+            <h2 class="text-center mb-5 fw-bold position-relative">
+                <span class="position-relative">
+                    關於輝達
+                    <!-- 標題下劃線 -->
+                <div class="title-underline"></div>
+                </span>
+            </h2>
+            <div class="row align-items-center g-4">
+                <!-- 左側文字介紹 -->
+                <div class="col-md-6">
+                    <div class="about-text p-4 bg-white rounded-3 shadow-sm">
+                        <!-- 公司簡介段落 -->
+                        <div class="mb-4">
+                            <h5 class="text-success mb-3">
+                                <i class="bi bi-building me-2"></i>公司簡介
+                            </h5>
+                            <p class="text-muted">
+                                <strong class="text-dark">輝達（NVIDIA）</strong>是全球領先的人工智能計算公司。
+                                我們的發明正在重塑各行各業，從
+                                <span class="badge bg-success">遊戲</span>到
+                                <span class="badge bg-success">醫療保健</span>，再到
+                                <span class="badge bg-success">自動駕駛汽車</span>。
+                            </p>
+                        </div>
+                        <!-- 技術成就段落 -->
+                        <div class="mb-4">
+                            <h5 class="text-success mb-3">
+                                <i class="bi bi-cpu me-2"></i>技術成就
+                            </h5>
+                            <p class="text-muted">
+                                輝達的突破性工作在
+                                <span class="fw-bold text-dark">人工智能</span>、
+                                <span class="fw-bold text-dark">數據科學</span>、
+                                <span class="fw-bold text-dark">高性能計算</span>、
+                                <span class="fw-bold text-dark">圖形</span>、
+                                <span class="fw-bold text-dark">增強和虛擬現實</span>
+                                等領域得到了廣泛認可。近年來，GPU深度學習引領現代AI——輝達的發明催生了新的計算模型和市場。
+                            </p>
+                        </div>
+                        <!-- 公司使命段落 -->
+                        <div>
+                            <h5 class="text-success mb-3">
+                                <i class="bi bi-flag me-2"></i>公司使命
+                            </h5>
+                            <p class="text-muted mb-0">
+                                我們致力於解決計算機科學中最具挑戰性的問題，推動科技創新，為全球帶來更美好的未來。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右側地圖嵌入 -->
+                <div class="col-md-6">
+                    <div class="map-container ratio ratio-4x3 rounded-3 shadow-sm overflow-hidden">
+                        <!-- Google地圖嵌入iframe -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4712961448396!2d121.56500600000001!3d25.0817878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac6dd2e2147d%3A0xd713adbc46a390b0!2sNVIDIA%E5%8F%B0%E7%81%A3%E5%88%86%E5%85%AC%E5%8F%B8!5e0!3m2!1szh-TW!2stw!4v1642327283619!5m2!1szh-TW!2stw" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer 頁尾區塊 -->
+    <footer class="bg-dark text-light py-5 mt-2">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- 關於輝達區塊 -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-bold">關於輝達</h5>
+                    <p class="text-light">輝達是全球領先的人工智能計算公司，致力於解決計算機科學中最具挑戰性的問題。</p>
+                    <!-- 社交媒體連結 -->
+                    <div class="social-icons">
+                        <!-- Facebook 圖標 -->
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <!-- Twitter 圖標 -->
+                        <a href="#" title="Twitter"><i class="bi bi-twitter"></i></a>
+                        <!-- LinkedIn 圖標 -->
+                        <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <!-- YouTube 圖標 -->
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- 快速連結區塊 -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-bold">快速連結</h5>
+                    <ul class="list-unstyled">
+                        <!-- 首頁連結 -->
+                        <li><a href="index.html" class="text-light text-decoration-none">首頁</a></li>
+                        <!-- 產品頁面連結 -->
+                        <li><a href="product.html" class="text-light text-decoration-none">產品</a></li>
+                        <!-- 關於我們頁面連結 -->
+                        <li><a href="about.html" class="text-light text-decoration-none">關於我們</a></li>
+                        <!-- 人力資源頁面連結 -->
+                        <li><a href="recruitment.html" class="text-light text-decoration-none">人力資源</a></li>
+                        <!-- 聯絡我們頁面連結 -->
+                        <li><a href="contact.html" class="text-light text-decoration-none">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <!-- 聯絡我們區塊 -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-bold">聯絡我們</h5>
+                    <!-- 地址資訊 -->
+                    <p class="text-light mb-2"><i class="bi bi-geo-alt-fill me-2"></i>台北市內湖區基湖路8號</p>
+                    <!-- 電話號碼 -->
+                    <p class="text-light mb-2"><i class="bi bi-telephone-fill me-2"></i>電話：(02) 2377-7377</p>
+                    <!-- 電子郵件地址 -->
+                    <p class="text-light mb-2"><i class="bi bi-envelope-fill me-2"></i>電子郵件：info@nvidia.com</p>
+                    <!-- 營業時間 -->
+                    <p class="text-light"><i class="bi bi-clock-fill me-2"></i>營業時間：週一至週五 9:00-18:00</p>
+                </div>
+            </div>
+            <!-- 分隔線 -->
+            <hr class="my-4">
+            <!-- 版權聲明 -->
+            <div class="text-center">
+                <p class="mb-0 text-light">&copy; 2025 NVIDIA Corporation. 版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+   
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 購物車功能 -->
+    <script src="js/cart.js"></script>
+</body>
+</html>

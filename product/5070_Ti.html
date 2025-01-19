@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <title>輝達</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFAkwq5rkkbUsQuJvSThsHS05SkYYejcUijA&s">
+    <link rel="stylesheet" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/style.css">
+ 
+</head>
+<body>
+    <!-- 導航欄 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- 品牌名稱 -->
+            <a class="navbar-brand" href="index.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFAkwq5rkkbUsQuJvSThsHS05SkYYejcUijA&s" alt="輝達" height="60">
+            </a>
+            <!-- 響應式折疊按鈕 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- 導航項目容器 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- 導航項目列表 -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- 首頁連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/index.html"><strong>首頁</strong></a>
+                    </li>
+                    <!-- 產品連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/product.html"><strong>產品</strong></a>
+                    </li>
+                    <!-- 關於我們連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/about.html"><strong>關於我們</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/recruitment.html"><strong>人力資源</strong></a>
+                    </li>
+                    <!-- 聯絡我們連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/contact.html"><strong>聯絡我們</strong></a>
+                    </li>
+                </ul>
+                 <!-- 登入和購物車按鈕 -->
+                 <div class="d-flex">
+                    <!-- 登入按鈕 -->
+                    <a href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/login.html" class="btn btn-outline-primary me-2" role="button">
+                        <i class="bi bi-person-fill"></i> <strong>登入</strong>
+                    </a>
+                    <!-- 購物車按鈕 -->
+                    <a href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/cart.html" class="btn btn-outline-success me-2 position-relative" role="button">
+                        <i class="bi bi-cart-fill"></i> <strong>購物車</strong>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 產品詳細資訊 -->
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://jctechspace.com/wp-content/uploads/2024/11/NVIDIA-GeForce-RTX-5070-Ti-GPU.webp" alt="NVIDIA RTX 5070 Ti" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">NVIDIA GeForce RTX 5070 Ti</h2>
+                <p class="lead">最新一代的中高階顯示卡，為遊戲和創作帶來卓越性能</p>
+                <ul class="list-unstyled">
+                    <li><strong>CUDA 核心：</strong> 7680</li>
+                    <li><strong>基礎時脈：</strong> 1.58 GHz</li>
+                    <li><strong>Boost 時脈：</strong> 1.77 GHz</li>
+                    <li><strong>記憶體：</strong> 12GB GDDR6X</li>
+                    <li><strong>記憶體頻寬：</strong> 912 GB/s</li>
+                </ul>
+                <h3 class="mt-4">NT$ 23,990</h3>
+                <button class="btn btn-nvidia btn-lg mt-3 hover-effect add-to-cart-btn"
+                    data-product-id="3"
+                    data-product-name="NVIDIA RTX 5070 Ti"
+                    data-product-price="26990"
+                    data-product-image="https://jctechspace.com/wp-content/uploads/2024/11/NVIDIA-GeForce-RTX-5070-Ti-GPU.webp">
+                <i class="bi bi-cart-plus-fill me-2"></i>加入購物車
+                </button>
+                <button class="btn btn-secondary btn-lg mt-3 hover-effect" 
+                    onclick="cart.addItem({
+                        id: '3',
+                        name: 'NVIDIA RTX 5070 Ti',
+                        price: 26990,
+                        image: 'https://jctechspace.com/wp-content/uploads/2024/11/NVIDIA-GeForce-RTX-5070-Ti-GPU.webp',
+                        quantity: 1
+                    }); window.location.href='../cart.html';">
+                    <i class="bi bi-credit-card-fill me-2"></i>直接結帳
+                </button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 mb-5">
+                <h3>產品特色與規格</h3>
+                <p class="lead mb-4">RTX 5070 Ti 是NVIDIA最新一代的中高階顯示卡，採用先進的Blackwell架構，為遊戲玩家和內容創作者提供卓越的性能和創新功能。</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>主要特色</h4>
+                        <ul>
+                            <li>第三代 RT 核心，提供更快的光線追蹤效能</li>
+                            <li>第四代 Tensor 核心，大幅增強 AI 運算能力</li>
+                            <li>支援 DLSS 4.0，實現更高品質的影像重建</li>
+                            <li>PCIe 5.0 介面，提供極致的數據傳輸速度</li>
+                            <li>優化的散熱設計，確保長時間高效能運作</li>
+                            <li>支援 AV1 編碼，提升串流和影片編輯效率</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>技術規格</h4>
+                        <ul>
+                            <li>CUDA 核心數：7680</li>
+                            <li>基礎時脈：1.58 GHz</li>
+                            <li>Boost 時脈：1.77 GHz</li>
+                            <li>記憶體：12GB GDDR6X</li>
+                            <li>記憶體頻寬：912 GB/s</li>
+                            <li>TDP：290W</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer 頁尾區塊 -->
+    <footer class="bg-dark text-light py-5 mt-2">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- 關於輝達區塊 -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-bold">關於輝達</h5>
+                    <p class="text-light">輝達是全球領先的人工智能計算公司，致力於解決計算機科學中最具挑戰性的問題。</p>
+                    <!-- 社交媒體連結 -->
+                    <div class="social-icons">
+                        <!-- Facebook 圖標 -->
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <!-- Twitter 圖標 -->
+                        <a href="#" title="Twitter"><i class="bi bi-twitter"></i></a>
+                        <!-- LinkedIn 圖標 -->
+                        <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <!-- YouTube 圖標 -->
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- 快速連結區塊 -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-bold">快速連結</h5>
+                    <ul class="list-unstyled">
+                        <!-- 首頁連結 -->
+                        <li><a href="index.html" class="text-light text-decoration-none">首頁</a></li>
+                        <!-- 產品頁面連結 -->
+                        <li><a href="product.html" class="text-light text-decoration-none">產品</a></li>
+                        <!-- 關於我們頁面連結 -->
+                        <li><a href="about.html" class="text-light text-decoration-none">關於我們</a></li>
+                        <!-- 人力資源頁面連結 -->
+                        <li><a href="recruitment.html" class="text-light text-decoration-none">人力資源</a></li>
+                        <!-- 聯絡我們頁面連結 -->
+                        <li><a href="contact.html" class="text-light text-decoration-none">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <!-- 聯絡我們區塊 -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-bold">聯絡我們</h5>
+                    <!-- 地址資訊 -->
+                    <p class="text-light mb-2"><i class="bi bi-geo-alt-fill me-2"></i>台北市內湖區基湖路8號</p>
+                    <!-- 電話號碼 -->
+                    <p class="text-light mb-2"><i class="bi bi-telephone-fill me-2"></i>電話：(02) 2377-7377</p>
+                    <!-- 電子郵件地址 -->
+                    <p class="text-light mb-2"><i class="bi bi-envelope-fill me-2"></i>電子郵件：info@nvidia.com</p>
+                    <!-- 營業時間 -->
+                    <p class="text-light"><i class="bi bi-clock-fill me-2"></i>營業時間：週一至週五 9:00-18:00</p>
+                </div>
+            </div>
+            <!-- 分隔線 -->
+            <hr class="my-4">
+            <!-- 版權聲明 -->
+            <div class="text-center">
+                <p class="mb-0 text-light">&copy; 2025 NVIDIA Corporation. 版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+   
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/week1.5_bootstrap/企業購物網站實作-以輝達為例/js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <title>輝達</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFAkwq5rkkbUsQuJvSThsHS05SkYYejcUijA&s">
+    <link rel="stylesheet" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/style.css">
+ 
+</head>
+<body>
+    <!-- 導航欄 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- 品牌名稱 -->
+            <a class="navbar-brand" href="index.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFAkwq5rkkbUsQuJvSThsHS05SkYYejcUijA&s" alt="輝達" height="60">
+            </a>
+            <!-- 響應式折疊按鈕 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- 導航項目容器 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- 導航項目列表 -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- 首頁連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/index.html"><strong>首頁</strong></a>
+                    </li>
+                    <!-- 產品連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/product.html"><strong>產品</strong></a>
+                    </li>
+                    <!-- 關於我們連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/about.html"><strong>關於我們</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/recruitment.html"><strong>人力資源</strong></a>
+                    </li>
+                    <!-- 聯絡我們連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/contact.html"><strong>聯絡我們</strong></a>
+                    </li>
+                </ul>
+                 <!-- 登入和購物車按鈕 -->
+                 <div class="d-flex">
+                    <!-- 登入按鈕 -->
+                    <a href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/login.html" class="btn btn-outline-primary me-2" role="button">
+                        <i class="bi bi-person-fill"></i> <strong>登入</strong>
+                    </a>
+                    <!-- 購物車按鈕 -->
+                    <a href="/week1.5_bootstrap/企業購物網站實作-以輝達為例/cart.html" class="btn btn-outline-success me-2 position-relative" role="button">
+                        <i class="bi bi-cart-fill"></i> <strong>購物車</strong>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 產品詳細資訊 -->
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://s4.itho.me/sites/default/files/images/Nvidia%20AI-on-5G-2021-07-01_141829.jpg" alt="NVIDIA A100 AI 加速卡" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-3">NVIDIA A100 AI 加速卡</h2>
+                <p class="lead">最先進的 AI 和高效能運算加速器，為數據中心提供革命性能</p>
+                <ul class="list-unstyled">
+                    <li><strong>CUDA 核心：</strong> 6912</li>
+                    <li><strong>基礎時脈：</strong> 1.41 GHz</li>
+                    <li><strong>Boost 時脈：</strong> 1.78 GHz</li>
+                    <li><strong>記憶體：</strong> 80GB HBM2e</li>
+                    <li><strong>記憶體頻寬：</strong> 2039 GB/s</li>
+                </ul>
+                <h3 class="mt-4">價格請洽詢</h3>
+                <button class="btn btn-nvidia btn-lg hover-effect">
+                    <i class="bi bi-envelope-fill me-2"></i>聯繫銷售
+                </button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 mb-5">
+                <h3>產品特色與規格</h3>
+                <p class="lead mb-4">NVIDIA A100 是專為 AI 和高效能運算設計的頂級加速器，採用最新的 NVIDIA Ampere 架構，為數據中心和大規模 AI 訓練提供前所未有的性能。</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>主要特色</h4>
+                        <ul>
+                            <li>第三代 Tensor Core，提供卓越的 AI 性能</li>
+                            <li>支援 TF32 和 FP64，適用於 AI 和 HPC 工作負載</li>
+                            <li>Multi-Instance GPU (MIG) 技術，實現資源最佳化</li>
+                            <li>NVLink 和 NVSwitch 技術，提供高速互連</li>
+                            <li>PCIe Gen 4，確保高速數據傳輸</li>
+                            <li>支援 CUDA 11，簡化 AI 和 HPC 應用開發</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>技術規格</h4>
+                        <ul>
+                            <li>CUDA 核心數：6912</li>
+                            <li>基礎時脈：1.41 GHz</li>
+                            <li>Boost 時脈：1.78 GHz</li>
+                            <li>記憶體：80GB HBM2e</li>
+                            <li>記憶體頻寬：2039 GB/s</li>
+                            <li>TDP：400W</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer 頁尾區塊 -->
+    <footer class="bg-dark text-light py-5 mt-2">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- 關於輝達區塊 -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-bold">關於輝達</h5>
+                    <p class="text-light">輝達是全球領先的人工智能計算公司，致力於解決計算機科學中最具挑戰性的問題。</p>
+                    <!-- 社交媒體連結 -->
+                    <div class="social-icons">
+                        <!-- Facebook 圖標 -->
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <!-- Twitter 圖標 -->
+                        <a href="#" title="Twitter"><i class="bi bi-twitter"></i></a>
+                        <!-- LinkedIn 圖標 -->
+                        <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <!-- YouTube 圖標 -->
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- 快速連結區塊 -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-bold">快速連結</h5>
+                    <ul class="list-unstyled">
+                        <!-- 首頁連結 -->
+                        <li><a href="index.html" class="text-light text-decoration-none">首頁</a></li>
+                        <!-- 產品頁面連結 -->
+                        <li><a href="product.html" class="text-light text-decoration-none">產品</a></li>
+                        <!-- 關於我們頁面連結 -->
+                        <li><a href="about.html" class="text-light text-decoration-none">關於我們</a></li>
+                        <!-- 人力資源頁面連結 -->
+                        <li><a href="recruitment.html" class="text-light text-decoration-none">人力資源</a></li>
+                        <!-- 聯絡我們頁面連結 -->
+                        <li><a href="contact.html" class="text-light text-decoration-none">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <!-- 聯絡我們區塊 -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-bold">聯絡我們</h5>
+                    <!-- 地址資訊 -->
+                    <p class="text-light mb-2"><i class="bi bi-geo-alt-fill me-2"></i>台北市內湖區基湖路8號</p>
+                    <!-- 電話號碼 -->
+                    <p class="text-light mb-2"><i class="bi bi-telephone-fill me-2"></i>電話：(02) 2377-7377</p>
+                    <!-- 電子郵件地址 -->
+                    <p class="text-light mb-2"><i class="bi bi-envelope-fill me-2"></i>電子郵件：info@nvidia.com</p>
+                    <!-- 營業時間 -->
+                    <p class="text-light"><i class="bi bi-clock-fill me-2"></i>營業時間：週一至週五 9:00-18:00</p>
+                </div>
+            </div>
+            <!-- 分隔線 -->
+            <hr class="my-4">
+            <!-- 版權聲明 -->
+            <div class="text-center">
+                <p class="mb-0 text-light">&copy; 2025 NVIDIA Corporation. 版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+   
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/week1.5_bootstrap/企業購物網站實作-以輝達為例/js/cart.js"></script>
+</body>
+</html>

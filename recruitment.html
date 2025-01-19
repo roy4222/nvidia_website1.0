@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <title>輝達</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFAkwq5rkkbUsQuJvSThsHS05SkYYejcUijA&s">
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+    <!-- 導航欄 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- 品牌名稱 -->
+            <a class="navbar-brand" href="index.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFAkwq5rkkbUsQuJvSThsHS05SkYYejcUijA&s" alt="輝達" height="60">
+            </a>
+            <!-- 響應式折疊按鈕 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- 導航項目容器 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- 導航項目列表 -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- 首頁連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><strong>首頁</strong></a>
+                    </li>
+                    <!-- 產品連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html"><strong>產品</strong></a>
+                    </li>
+                    <!-- 關於我們連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><strong>關於我們</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recruitment.html"><strong>人力資源</strong></a>
+                    </li>
+                    <!-- 聯絡我們連結 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><strong>聯絡我們</strong></a>
+                    </li>
+                </ul>
+                 <!-- 登入和購物車按鈕 -->
+                 <div class="d-flex">
+                    <!-- 登入按鈕 -->
+                    <a href="login.html" class="btn btn-outline-primary me-2" role="button">
+                        <i class="bi bi-person-fill"></i> <strong>登入</strong>
+                    </a>
+                    <!-- 購物車按鈕 -->
+                    <a href="cart.html" class="btn btn-outline-success me-2 position-relative" role="button">
+                        <i class="bi bi-cart-fill"></i> <strong>購物車</strong>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 人力資源應徵表格 -->
+    <section class="recruitment-section py-5">
+        <div class="container">
+            <!-- 標題區塊 -->
+            <h2 class="text-center mb-5 fw-bold position-relative">
+                <span class="position-relative">
+                    人力資源
+                    <div class="title-underline"></div>
+                </span>
+            </h2>
+            
+            <!-- 職缺表格 -->
+            <div class="table-responsive shadow-sm rounded">
+                <table class="table table-hover mb-0">
+                    <thead class="table-nvidia">
+                        <tr>
+                            <th scope="col" class="py-3">職位名稱</th>
+                            <th scope="col" class="py-3">部門</th>
+                            <th scope="col" class="py-3">地點</th>
+                            <th scope="col" class="py-3">經驗要求</th>
+                            <th scope="col" class="py-3">工作內容</th>
+                            <th scope="col" class="py-3">應徵</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-3">
+                                <span class="fw-semibold text-nvidia">AI 研究工程師</span>
+                                <span class="badge bg-success ms-2">新職缺</span>
+                            </td>
+                            <td class="py-3">研發部門</td>
+                            <td class="py-3"><i class="bi bi-geo-alt me-1"></i>台北</td>
+                            <td class="py-3">3-5 年</td>
+                            <td class="py-3">
+                                <ul class="list-unstyled mb-0">
+                                    <li><i class="bi bi-dot me-1"></i>開發和優化深度學習模型及演算法</li>
+                                    <li><i class="bi bi-dot me-1"></i>研究並實現電腦視覺和自然語言處理技術</li>
+                                    <li><i class="bi bi-dot me-1"></i>設計高效能的AI加速解決方案</li>
+                                    <li><i class="bi bi-dot me-1"></i>與全球研發團隊協作開發創新技術</li>
+                                </ul>
+                            </td>
+                            <td class="py-3 text-center align-middle">
+                                <button class="btn btn-nvidia-outline btn-sm w-100">
+                                    <i class="bi bi-send me-1"></i>立即應徵
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">
+                                <span class="fw-semibold text-nvidia">軟體開發工程師</span>
+                            </td>
+                            <td class="py-3">軟體部門</td>
+                            <td class="py-3"><i class="bi bi-geo-alt me-1"></i>新竹</td>
+                            <td class="py-3">2-4 年</td>
+                            <td class="py-3">
+                                <ul class="list-unstyled mb-0">
+                                    <li><i class="bi bi-dot me-1"></i>開發GPU驅動程式和系統軟體</li>
+                                    <li><i class="bi bi-dot me-1"></i>優化CUDA平台性能和功能</li>
+                                    <li><i class="bi bi-dot me-1"></i>設計及實現圖形渲染引擎</li>
+                                    <li><i class="bi bi-dot me-1"></i>開發遊戲開發工具和SDK</li>
+                                </ul>
+                            </td>
+                            <td class="py-3 text-center align-middle">
+                                <button class="btn btn-nvidia-outline btn-sm w-100">
+                                    <i class="bi bi-send me-1"></i>立即應徵
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">
+                                <span class="fw-semibold text-nvidia">產品經理</span>
+                                <span class="badge bg-info ms-2">急徵</span>
+                            </td>
+                            <td class="py-3">市場部門</td>
+                            <td class="py-3"><i class="bi bi-geo-alt me-1"></i>台中</td>
+                            <td class="py-3">5-7 年</td>
+                            <td class="py-3">
+                                <ul class="list-unstyled mb-0">
+                                    <li><i class="bi bi-dot me-1"></i>制定產品策略和發展規劃</li>
+                                    <li><i class="bi bi-dot me-1"></i>分析市場趨勢和競爭對手動態</li>
+                                    <li><i class="bi bi-dot me-1"></i>領導產品開發和上市流程</li>
+                                    <li><i class="bi bi-dot me-1"></i>與各部門協調優化產品體驗</li>
+                                </ul>
+                            </td>
+                            <td class="py-3 text-center align-middle">
+                                <button class="btn btn-nvidia-outline btn-sm w-100">
+                                    <i class="bi bi-send me-1"></i>立即應徵
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">
+                                <span class="fw-semibold text-nvidia">深度學習架構師</span>
+                                <span class="badge bg-warning ms-2">高薪職位</span>
+                            </td>
+                            <td class="py-3">AI 部門</td>
+                            <td class="py-3"><i class="bi bi-geo-alt me-1"></i>台北</td>
+                            <td class="py-3">7-10 年</td>
+                            <td class="py-3">
+                                <ul class="list-unstyled mb-0">
+                                    <li><i class="bi bi-dot me-1"></i>設計和優化大規模深度學習架構</li>
+                                    <li><i class="bi bi-dot me-1"></i>開發先進的神經網絡模型</li>
+                                    <li><i class="bi bi-dot me-1"></i>提升AI模型的訓練和推理效率</li>
+                                    <li><i class="bi bi-dot me-1"></i>領導跨部門AI項目開發</li>
+                                </ul>
+                            </td>
+                            <td class="py-3 text-center align-middle">
+                                <button class="btn btn-nvidia-outline btn-sm w-100">
+                                    <i class="bi bi-send me-1"></i>立即應徵
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-3">
+                                <span class="fw-semibold text-nvidia">硬體工程師</span>
+                            </td>
+                            <td class="py-3">硬體部門</td>
+                            <td class="py-3"><i class="bi bi-geo-alt me-1"></i>新竹</td>
+                            <td class="py-3">3-6 年</td>
+                            <td class="py-3">
+                                <ul class="list-unstyled mb-0">
+                                    <li><i class="bi bi-dot me-1"></i>設計和開發高性能GPU芯片</li>
+                                    <li><i class="bi bi-dot me-1"></i>優化硬體架構以提高能效比</li>
+                                    <li><i class="bi bi-dot me-1"></i>進行電路設計和仿真測試</li>
+                                    <li><i class="bi bi-dot me-1"></i>與製造團隊協作實現量產</li>
+                                </ul>
+                            </td>
+                            <td class="py-3 text-center align-middle">
+                                <button class="btn btn-nvidia-outline btn-sm w-100">
+                                    <i class="bi bi-send me-1"></i>立即應徵
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+   
+    
+    <!-- Footer 頁尾區塊 -->
+    <footer class="bg-dark text-light py-5 mt-2">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- 關於輝達區塊 -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-bold">關於輝達</h5>
+                    <p class="text-light">輝達是全球領先的人工智能計算公司，致力於解決計算機科學中最具挑戰性的問題。</p>
+                    <!-- 社交媒體連結 -->
+                    <div class="social-icons">
+                        <!-- Facebook 圖標 -->
+                        <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <!-- Twitter 圖標 -->
+                        <a href="#" title="Twitter"><i class="bi bi-twitter"></i></a>
+                        <!-- LinkedIn 圖標 -->
+                        <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <!-- YouTube 圖標 -->
+                        <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- 快速連結區塊 -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-bold">快速連結</h5>
+                    <ul class="list-unstyled">
+                        <!-- 首頁連結 -->
+                        <li><a href="index.html" class="text-light text-decoration-none">首頁</a></li>
+                        <!-- 產品頁面連結 -->
+                        <li><a href="product.html" class="text-light text-decoration-none">產品</a></li>
+                        <!-- 關於我們頁面連結 -->
+                        <li><a href="about.html" class="text-light text-decoration-none">關於我們</a></li>
+                        <!-- 人力資源頁面連結 -->
+                        <li><a href="recruitment.html" class="text-light text-decoration-none">人力資源</a></li>
+                        <!-- 聯絡我們頁面連結 -->
+                        <li><a href="contact.html" class="text-light text-decoration-none">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <!-- 聯絡我們區塊 -->
+                <div class="col-md-4">
+                    <h5 class="mb-3 fw-bold">聯絡我們</h5>
+                    <!-- 地址資訊 -->
+                    <p class="text-light mb-2"><i class="bi bi-geo-alt-fill me-2"></i>台北市內湖區基湖路8號</p>
+                    <!-- 電話號碼 -->
+                    <p class="text-light mb-2"><i class="bi bi-telephone-fill me-2"></i>電話：(02) 2377-7377</p>
+                    <!-- 電子郵件地址 -->
+                    <p class="text-light mb-2"><i class="bi bi-envelope-fill me-2"></i>電子郵件：info@nvidia.com</p>
+                    <!-- 營業時間 -->
+                    <p class="text-light"><i class="bi bi-clock-fill me-2"></i>營業時間：週一至週五 9:00-18:00</p>
+                </div>
+            </div>
+            <!-- 分隔線 -->
+            <hr class="my-4">
+            <!-- 版權聲明 -->
+            <div class="text-center">
+                <p class="mb-0 text-light">&copy; 2025 NVIDIA Corporation. 版權所有。</p>
+            </div>
+        </div>
+    </footer>
+
+   
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 購物車功能 -->
+    <script src="js/cart.js"></script>
+</body>
+</html>
